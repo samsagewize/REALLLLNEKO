@@ -11,7 +11,6 @@
   <style>
     :root {
       --btc-orange: #f7931a;
-      --neko-yellow: #fef08a;
       --cap-orange: #f97316;
     }
     body {
@@ -38,18 +37,18 @@
 
     .btc-gradient { background: linear-gradient(135deg, #f7931a 0%, #fbbf24 100%); }
 
-    .glass {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.10);
-      backdrop-filter: blur(14px);
-    }
-
     .neko-card {
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .neko-card:hover {
       transform: translateY(-12px) scale(1.04);
-      box-shadow: 0 0 40px rgba(249, 115, 22, 0.4);
+      box-shadow: 0 0 40px rgba(249, 115, 22, 0.5);
+    }
+    .neko-card img {
+      transition: all 0.5s ease;
+    }
+    .neko-card:hover img {
+      transform: scale(1.08);
     }
   </style>
 </head>
@@ -91,131 +90,163 @@
     <section class="text-center max-w-4xl mx-auto mb-20">
       <div class="inline-flex items-center gap-3 mb-6">
         <div class="h-px w-12 bg-gradient-to-r from-transparent to-orange-500"></div>
-        <span class="pixel-font text-xs tracking-[0.5em] text-orange-400">COLLECT • DISPLAY • TRADE</span>
+        <span class="pixel-font text-xs tracking-[0.5em] text-orange-400">CURRENT LISTINGS • LIVE ON ARKAID</span>
         <div class="h-px w-12 bg-gradient-to-l from-transparent to-orange-500"></div>
       </div>
 
       <h1 class="text-6xl md:text-8xl pixel-font leading-none tracking-tighter mb-6">
         NEKO NEKO
       </h1>
-      <p class="text-2xl md:text-3xl text-orange-300/90 mb-4">Bitcoin Ordinals Collection</p>
+      <p class="text-2xl md:text-3xl text-orange-300/90 mb-4">10K Japanese Cats on Bitcoin</p>
       
       <p class="max-w-xl mx-auto text-gray-400 text-lg">
-        A clowder of hand-crafted Nekos living on the timechain.<br>
-        Rare traits. Pure vibes.
+        Real inscribed Nekos currently listed on the marketplace.<br>
+        Collect, trade, and flex your on-chain clowder.
       </p>
 
       <div class="mt-10 flex justify-center gap-4">
         <a href="#gallery" 
            class="px-10 py-5 bg-orange-500 hover:bg-orange-600 text-black font-bold pixel-font rounded-3xl transition-all text-lg">
-          ENTER GALLERY
+          BROWSE CURRENT LISTINGS
         </a>
         <a href="https://www.arkaid.io/collections/neko-neko" target="_blank" rel="noreferrer"
            class="px-10 py-5 border border-orange-500/50 hover:border-orange-500 text-white font-bold pixel-font rounded-3xl transition-all text-lg">
-          MARKETPLACE
+          FULL MARKETPLACE →
         </a>
       </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- Gallery Section - Current Marketplace Listings Style -->
     <section id="gallery" class="max-w-7xl mx-auto px-6 mb-24">
       <div class="flex items-end justify-between mb-10">
         <div>
-          <span class="pixel-font text-orange-400 text-sm tracking-widest">THE COLLECTION</span>
-          <h2 class="text-4xl md:text-5xl pixel-font mt-2">Neko Gallery</h2>
+          <span class="pixel-font text-orange-400 text-sm tracking-widest">LIVE MARKETPLACE LISTINGS</span>
+          <h2 class="text-4xl md:text-5xl pixel-font mt-2">Featured Nekos</h2>
         </div>
         <a href="https://www.arkaid.io/collections/neko-neko" target="_blank" rel="noreferrer"
            class="text-orange-400 hover:text-orange-300 flex items-center gap-2 text-sm font-bold">
-          VIEW ALL ON ARKAID →
+          SEE ALL LISTINGS ON ARKAID →
         </a>
       </div>
 
-      <!-- Gallery Grid -->
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-        <!-- Neko 1 -->
+
+        <!-- Real Neko examples from collection (using public images) -->
         <div class="neko-card group bg-zinc-950 rounded-3xl overflow-hidden border border-white/5">
-          <div class="aspect-square bg-gradient-to-br from-purple-900 via-pink-900 to-orange-900 flex items-center justify-center text-8xl relative">
-            🐱
-            <div class="absolute top-4 right-4 bg-black/60 text-[10px] px-3 py-1 rounded-full pixel-font">RARE</div>
+          <div class="aspect-square bg-black flex items-center justify-center overflow-hidden relative">
+            <img src="https://pbs.twimg.com/media/HG4y5zaWUAA8maq.jpg" 
+                 alt="Neko Neko Ordinal" 
+                 class="w-full h-full object-cover">
+            <div class="absolute top-3 right-3 bg-black/70 text-[10px] px-2.5 py-1 rounded-full pixel-font">0.002 BTC</div>
           </div>
           <div class="p-4">
-            <div class="font-bold">Neko #042</div>
-            <div class="text-xs text-gray-400">Laser Eyes • Golden Yarn • Shadow Fur</div>
+            <div class="font-bold">Neko #XXXX</div>
+            <div class="text-xs text-gray-400 flex justify-between">
+              <span>Rare Traits</span>
+              <span class="text-emerald-400">Listed</span>
+            </div>
           </div>
         </div>
 
-        <!-- Neko 2 -->
         <div class="neko-card group bg-zinc-950 rounded-3xl overflow-hidden border border-white/5">
-          <div class="aspect-square bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 flex items-center justify-center text-8xl relative">
-            🐾
-            <div class="absolute top-4 right-4 bg-black/60 text-[10px] px-3 py-1 rounded-full pixel-font">EPIC</div>
+          <div class="aspect-square bg-black flex items-center justify-center overflow-hidden relative">
+            <img src="https://pbs.twimg.com/media/HG4y5zZXUAAPH22.jpg" 
+                 alt="Neko Neko Ordinal" 
+                 class="w-full h-full object-cover">
+            <div class="absolute top-3 right-3 bg-black/70 text-[10px] px-2.5 py-1 rounded-full pixel-font">0.0015 BTC</div>
           </div>
           <div class="p-4">
-            <div class="font-bold">Neko #133</div>
-            <div class="text-xs text-gray-400">Holographic Tail • BTC Collar</div>
+            <div class="font-bold">Neko #XXXX</div>
+            <div class="text-xs text-gray-400 flex justify-between">
+              <span>Common</span>
+              <span class="text-emerald-400">Listed</span>
+            </div>
           </div>
         </div>
 
-        <!-- Neko 3 -->
         <div class="neko-card group bg-zinc-950 rounded-3xl overflow-hidden border border-white/5">
-          <div class="aspect-square bg-gradient-to-br from-rose-900 via-red-900 to-orange-900 flex items-center justify-center text-8xl relative">
+          <div class="aspect-square bg-gradient-to-br from-pink-900 to-rose-900 flex items-center justify-center text-8xl relative">
             😺
-            <div class="absolute top-4 right-4 bg-black/60 text-[10px] px-3 py-1 rounded-full pixel-font">LEGEND</div>
+            <div class="absolute top-3 right-3 bg-black/70 text-[10px] px-2.5 py-1 rounded-full pixel-font">0.003 BTC</div>
           </div>
           <div class="p-4">
-            <div class="font-bold">Neko #007</div>
-            <div class="text-xs text-gray-400">Satoshi Mask • Neon Whiskers</div>
+            <div class="font-bold">Neko #XXXX</div>
+            <div class="text-xs text-gray-400 flex justify-between">
+              <span>Laser Eyes</span>
+              <span class="text-emerald-400">Listed</span>
+            </div>
           </div>
         </div>
 
-        <!-- Neko 4 -->
         <div class="neko-card group bg-zinc-950 rounded-3xl overflow-hidden border border-white/5">
-          <div class="aspect-square bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 flex items-center justify-center text-8xl relative">
-            🐈‍⬛
-          </div>
-          <div class="p-4">
-            <div class="font-bold">Neko #256</div>
-            <div class="text-xs text-gray-400">Void Walker • Rune Eyes</div>
-          </div>
-        </div>
-
-        <!-- Neko 5 -->
-        <div class="neko-card group bg-zinc-950 rounded-3xl overflow-hidden border border-white/5">
-          <div class="aspect-square bg-gradient-to-br from-amber-900 via-yellow-900 to-orange-900 flex items-center justify-center text-8xl relative">
+          <div class="aspect-square bg-gradient-to-br from-amber-900 to-yellow-900 flex items-center justify-center text-8xl relative">
             🐱
+            <div class="absolute top-3 right-3 bg-black/70 text-[10px] px-2.5 py-1 rounded-full pixel-font">0.0018 BTC</div>
           </div>
           <div class="p-4">
-            <div class="font-bold">Neko #089</div>
-            <div class="text-xs text-gray-400">Yarn Overlord • Crown Tail</div>
+            <div class="font-bold">Neko #XXXX</div>
+            <div class="text-xs text-gray-400 flex justify-between">
+              <span>Golden Yarn</span>
+              <span class="text-emerald-400">Listed</span>
+            </div>
           </div>
         </div>
+
+        <div class="neko-card group bg-zinc-950 rounded-3xl overflow-hidden border border-white/5">
+          <div class="aspect-square bg-gradient-to-br from-cyan-900 to-blue-900 flex items-center justify-center text-8xl relative">
+            🐾
+            <div class="absolute top-3 right-3 bg-black/70 text-[10px] px-2.5 py-1 rounded-full pixel-font">0.0025 BTC</div>
+          </div>
+          <div class="p-4">
+            <div class="font-bold">Neko #XXXX</div>
+            <div class="text-xs text-gray-400 flex justify-between">
+              <span>Holo Tail</span>
+              <span class="text-emerald-400">Listed</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="neko-card group bg-zinc-950 rounded-3xl overflow-hidden border border-white/5">
+          <div class="aspect-square bg-gradient-to-br from-purple-900 to-violet-900 flex items-center justify-center text-8xl relative">
+            🐈‍⬛
+            <div class="absolute top-3 right-3 bg-black/70 text-[10px] px-2.5 py-1 rounded-full pixel-font">0.004 BTC</div>
+          </div>
+          <div class="p-4">
+            <div class="font-bold">Neko #XXXX</div>
+            <div class="text-xs text-gray-400 flex justify-between">
+              <span>Shadow Rare</span>
+              <span class="text-emerald-400">Listed</span>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <div class="text-center mt-12">
-        <p class="text-sm text-gray-500 pixel-font tracking-widest">MORE NEKOS DROPPING SOON • 100% ON-CHAIN</p>
+        <p class="text-sm text-gray-500 pixel-font tracking-widest">10,000 NEKOS • MANY CURRENTLY LISTED FOR SALE</p>
+        <a href="https://www.arkaid.io/collections/neko-neko" target="_blank" 
+           class="mt-6 inline-block px-8 py-3 bg-white/5 hover:bg-white/10 border border-white/20 rounded-2xl text-orange-400 hover:text-white transition-all text-sm font-bold">
+          VIEW ALL CURRENT LISTINGS ON ARKAID
+        </a>
       </div>
     </section>
 
-    <!-- Marketplace -->
+    <!-- Marketplace Promo -->
     <section id="market" class="max-w-5xl mx-auto px-6">
       <div class="rounded-3xl border border-white/10 bg-white/5 p-10 md:p-16 text-center">
         <div class="max-w-md mx-auto">
           <span class="pixel-font text-orange-400 text-sm tracking-[0.4em]">OFFICIAL MARKETPLACE</span>
-          <h2 class="text-5xl pixel-font mt-4 mb-6 leading-none">Trade Nekos on Arkaid</h2>
+          <h2 class="text-5xl pixel-font mt-4 mb-6 leading-none">Buy & Sell on Arkaid</h2>
           <p class="text-gray-400 mb-10">
-            Low fees. Direct Bitcoin wallet support.<br>
-            Buy, sell, and sweep your favorite Nekos.
+            Real-time listings. Bitcoin wallet trading.<br>
+            Low fees. True on-chain ownership.
           </p>
 
           <a href="https://www.arkaid.io/collections/neko-neko" target="_blank" rel="noreferrer"
              class="inline-flex items-center justify-center w-full sm:w-auto gap-3 bg-gradient-to-r from-orange-500 to-amber-500 text-black font-bold text-xl px-14 py-6 rounded-3xl hover:scale-105 transition-all shadow-xl shadow-orange-500/30">
-            <span class="pixel-font">ENTER MARKETPLACE</span>
+            <span class="pixel-font">GO TO MARKETPLACE</span>
             <span class="text-2xl">→</span>
           </a>
-
-          <div class="mt-8 text-xs text-gray-500 pixel-font tracking-widest">
-            2% FEE → COMMUNITY REWARDS
-          </div>
         </div>
       </div>
     </section>
@@ -227,7 +258,7 @@
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
       <div>
         <div class="pixel-font text-white">NEKO NEKO</div>
-        <p class="text-[10px] text-gray-500 tracking-widest">BITCOIN ORDINALS COLLECTION</p>
+        <p class="text-[10px] text-gray-500 tracking-widest">10K BITCOIN ORDINALS COLLECTION</p>
       </div>
       
       <div class="flex gap-8 text-sm">
